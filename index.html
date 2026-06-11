@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Best Fruits Shop in Karachi | Maru Fruits</title>
+  <meta name="description" content="Buy fresh fruits online in Karachi at affordable prices. Maru Fruits delivers farm-picked seasonal mangoes, apples, bananas & more to your doorstep. Order now!">
+  <meta name="keywords" content="fresh fruits in Karachi, buy fruits online Karachi, seasonal fruits, Maru Fruits, fruits in Nazimabad, fruits in Clifton, fruits in DHA Karachi, fruits in Gulshan Iqbal, fruits in Blue Area, fresh fruit delivery Karachi, best fruit shop Karachi, organic fruits Karachi, fruit delivery same day Karachi, mango delivery Karachi, fruit market Karachi, farm fresh fruits Pakistan, quality fruits online, affordable fruits delivery, fruits wholesale Karachi, healthy fruits Karachi">
+  <link rel="canonical" href="https://www.marufruits.com/">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════ NAVBAR ═══════════════════════════════ -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">🍋 Maru <span>Fruits</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="seasonal.html">Seasonal</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="order.html">Order Now</a></li>
+      </ul>
+      <button class="nav-cart-btn" id="cartBtn">
+        🛒 Cart <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="nav-mobile" id="navMobile">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="seasonal.html">Seasonal</a>
+      <a href="about.html">About Us</a>
+      <a href="order.html">Order Now</a>
+      <button class="btn btn-gold btn-sm" id="cartBtnMobile" style="margin-top:.4rem;width:fit-content">🛒 Cart</button>
+    </nav>
+  </nav>
+
+  <!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <p class="section-label" style="color:rgba(255,255,255,.6)">Welcome to Maru Fruits</p>
+        <h1>Farm <em>Fresh</em> Fruits<br>Delivered in Karachi</h1>
+        <p class="hero-sub">
+          Looking for the best <strong>fresh fruits in Karachi</strong>?
+          We deliver farm-picked, hand-sorted fruits straight to your doorstep — fresh, fast, and affordable.
+        </p>
+        <div class="hero-btns">
+          <a href="products.html" class="btn btn-gold">Shop Fruits 🍎</a>
+          <a href="order.html"    class="btn btn-outline-white">Order Now →</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><strong>50+</strong><span>Fruit Varieties</span></div>
+          <div class="stat"><strong>10k+</strong><span>Happy Customers</span></div>
+          <div class="stat"><strong>4.9★</strong><span>Customer Rating</span></div>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="hero-img-wrap">
+          <img class="main-img"
+               src="https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?w=600&q=80"
+               alt="Fresh mixed fruits basket with mangoes oranges and apples">
+          <div class="hero-badge b1">🌿 100% Natural</div>
+          <div class="hero-badge b2">🚚 Free Delivery</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════ TRUST STRIP ═══════════════════════════════ -->
+  <div class="trust-strip">
+    <div class="trust-item"><span>🚚</span> Free delivery in Karachi</div>
+    <div class="trust-item"><span>🌿</span> 100% Fresh &amp; Natural</div>
+    <div class="trust-item"><span>⭐</span> 4.9/5 Customer Rating</div>
+    <div class="trust-item"><span>🔒</span> Secure Payments</div>
+    <div class="trust-item"><span>📦</span> Same-Day Delivery</div>
+  </div>
+
+  <!-- ═══════════════════════════════ FEATURED FRUITS ═══════════════════════════════ -->
+  <section class="featured section">
+    <div class="section-label">Our Best Sellers</div>
+    <h2>Featured Fresh Fruits</h2>
+    <p class="section-intro">
+      Enjoy the finest <strong>fresh fruits in Karachi</strong> — every item hand-picked for flavour and freshness.
+    </p>
+    <div class="fruits-grid">
+
+      <article class="fruit-card" data-category="tropical">
+        <span class="badge-tag">Best Seller</span>
+        <img class="fruit-card-img"
+             src="https://images.unsplash.com/photo-1553279768-865429fa0078?w=400&q=80"
+             alt="Fresh Pakistani Sindhri mangoes">
+        <div class="fruit-card-body">
+          <h3>Sindhri Mango</h3>
+          <p>Juicy, golden Sindhri mangoes freshly harvested from Sindh's orchards.</p>
+          <div class="fruit-card-footer">
+            <div class="fruit-card-price">Rs. 280 <span>/ kg</span></div>
+            <button class="btn btn-green btn-sm"
+              onclick="addToCart('mango','Sindhri Mango',280,'🥭','https://images.unsplash.com/photo-1553279768-865429fa0078?w=100&q=60')">
+              + Cart
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <article class="fruit-card" data-category="everyday">
+        <img class="fruit-card-img"
+             src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=400&q=80"
+             alt="Ripe yellow bananas bunch Pakistan">
+        <div class="fruit-card-body">
+          <h3>Bananas</h3>
+          <p>Sweet, energy-rich bananas — perfect for snacking, smoothies, or baking.</p>
+          <div class="fruit-card-footer">
+            <div class="fruit-card-price">Rs. 120 <span>/ kg</span></div>
+            <button class="btn btn-green btn-sm"
+              onclick="addToCart('banana','Bananas',120,'🍌','https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=100&q=60')">
+              + Cart
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <article class="fruit-card" data-category="imported">
+        <span class="badge-tag">Fresh Import</span>
+        <img class="fruit-card-img"
+             src="https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=400&q=80"
+             alt="Fresh red apples from Balochistan Pakistan">
+        <div class="fruit-card-body">
+          <h3>Red Apples</h3>
+          <p>Crisp, sweet apples sourced from the high-altitude orchards of Balochistan.</p>
+          <div class="fruit-card-footer">
+            <div class="fruit-card-price">Rs. 350 <span>/ kg</span></div>
+            <button class="btn btn-green btn-sm"
+              onclick="addToCart('apple','Red Apples',350,'🍎','https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=100&q=60')">
+              + Cart
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <article class="fruit-card" data-category="citrus">
+        <img class="fruit-card-img"
+             src="https://images.unsplash.com/photo-1547514701-42782101795e?w=400&q=80"
+             alt="Fresh Kinno oranges from Punjab Pakistan">
+        <div class="fruit-card-body">
+          <h3>Kinno Oranges</h3>
+          <p>Vitamin-C rich Kinno oranges, freshly arrived from Punjab's citrus belt.</p>
+          <div class="fruit-card-footer">
+            <div class="fruit-card-price">Rs. 180 <span>/ kg</span></div>
+            <button class="btn btn-green btn-sm"
+              onclick="addToCart('orange','Kinno Oranges',180,'🍊','https://images.unsplash.com/photo-1547514701-42782101795e?w=100&q=60')">
+              + Cart
+            </button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+    <div style="text-align:center;margin-top:2.5rem">
+      <a href="products.html" class="btn btn-outline">View All Products →</a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ WHY US ═══════════════════════════════ -->
+  <section class="section" style="background:#fff">
+    <div style="max-width:1180px;margin:0 auto">
+      <div class="text-center">
+        <div class="section-label">Why Choose Us</div>
+        <h2>Quality You Can Taste</h2>
+        <p class="section-intro">From farm to your door — we guarantee freshness, fair prices, and reliable delivery every single time.</p>
+      </div>
+      <div class="values-grid" style="margin-top:0">
+        <div class="value-card">
+          <div class="value-icon">🌱</div>
+          <h3>Farm Direct</h3>
+          <p>Sourced directly from local farmers across Pakistan — no middlemen, just freshness.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">❄️</div>
+          <h3>Cold Chain</h3>
+          <p>Our refrigerated delivery fleet ensures every fruit arrives at peak freshness.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">⚡</div>
+          <h3>Same-Day Delivery</h3>
+          <p>Order before 2 PM and receive your fruits the same day anywhere in Karachi.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">💰</div>
+          <h3>Best Prices</h3>
+          <p>We match or beat market prices. Quality fruits don't have to cost a fortune.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ CTA BANNER ═══════════════════════════════ -->
+  <section class="cta-banner">
+    <h2>Ready to Order Fresh Fruits?</h2>
+    <p>Place your order today and get same-day delivery across Karachi.</p>
+    <div class="cta-btns">
+      <a href="order.html"    class="btn btn-gold">Order Now 🛒</a>
+      <a href="seasonal.html" class="btn btn-outline-white">See Seasonal Fruits →</a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">🍋 Maru <span>Fruits</span></a>
+        <p>Karachi's most trusted fresh fruit delivery service. Farm-picked, fast-delivered, always fresh.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="seasonal.html">Seasonal Fruits</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="order.html">Order Now</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Fruits</h4>
+        <ul>
+          <li><a href="products.html">Mangoes</a></li>
+          <li><a href="products.html">Apples</a></li>
+          <li><a href="products.html">Oranges</a></li>
+          <li><a href="products.html">Grapes</a></li>
+          <li><a href="seasonal.html">Seasonal Picks</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+923001234567">📞 0300-1234567</a></li>
+          <li><a href="mailto:info@marufruits.com">✉️ info@marufruits.com</a></li>
+          <li><a href="#">📍 Clifton, Karachi</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Maru Fruits. All rights reserved. | Fresh fruits in Karachi delivered daily.</p>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════ CART DRAWER ═══════════════════════════════ -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+    <div class="cart-header">
+      <h3>🛒 Your Cart</h3>
+      <button class="cart-close" id="cartClose" aria-label="Close cart">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <span>Total:</span>
+        <strong id="cartTotal">Rs. 0</strong>
+      </div>
+      <div class="cart-actions">
+        <button class="btn btn-outline btn-sm" id="clearCartBtn">Clear</button>
+        <a href="order.html" class="btn btn-gold" onclick="closeCart()">Checkout →</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Toast container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

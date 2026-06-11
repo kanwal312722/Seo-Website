@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Fresh Fruits Online | Maru Fruits Karachi</title>
+  <meta name="description" content="Order fresh fruits online in Karachi. Fill in your details and we deliver the same day. Mangoes, apples, bananas and more from Maru Fruits.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">🍋 Maru <span>Fruits</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="seasonal.html">Seasonal</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="order.html">Order Now</a></li>
+      </ul>
+      <button class="nav-cart-btn" id="cartBtn">
+        🛒 Cart <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="nav-mobile" id="navMobile">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="seasonal.html">Seasonal</a>
+      <a href="about.html">About Us</a>
+      <a href="order.html">Order Now</a>
+      <button class="btn btn-gold btn-sm" id="cartBtnMobile" style="margin-top:.4rem;width:fit-content">🛒 Cart</button>
+    </nav>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <header class="page-hero">
+    <h1>Order Fresh Fruits</h1>
+    <p>Fill in your details below and we'll deliver right to your door — same day in Karachi.</p>
+  </header>
+
+  <!-- ORDER LAYOUT -->
+  <main class="section" style="background:var(--cream)">
+    <div class="order-layout" style="max-width:1100px;margin:0 auto">
+
+      <!-- ORDER FORM -->
+      <div class="order-form-wrap">
+        <h2>Place Your Order</h2>
+
+        <!-- Success Message (hidden until submitted) -->
+        <div class="order-success" id="orderSuccess">
+          <div class="success-icon">🎉</div>
+          <h3>Order Placed Successfully!</h3>
+          <p>Thank you, <strong id="successName"></strong>! Your fresh fruits are being prepared and will be delivered today.</p>
+          <p style="margin-top:.6rem;font-size:.88rem">You'll receive a confirmation call within 15 minutes.</p>
+          <div style="margin-top:1.8rem;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+            <a href="index.html"    class="btn btn-green">← Back to Home</a>
+            <a href="products.html" class="btn btn-outline">Browse More Fruits</a>
+          </div>
+        </div>
+
+        <!-- THE FORM -->
+        <form id="orderForm" novalidate>
+
+          <!-- Personal Info -->
+          <div class="form-section-title">Personal Information</div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullName">Full Name <span>*</span></label>
+              <input type="text" id="fullName" name="fullName"
+                     placeholder="e.g. Ahmed Khan" required autocomplete="name">
+              <div class="error-msg" id="fullNameError"></div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address <span>*</span></label>
+              <input type="email" id="email" name="email"
+                     placeholder="e.g. ahmed@gmail.com" required autocomplete="email">
+              <div class="error-msg" id="emailError"></div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number <span>*</span></label>
+            <input type="tel" id="phone" name="phone"
+                   placeholder="e.g. 03001234567" required autocomplete="tel">
+            <div class="error-msg" id="phoneError"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="address">Delivery Address <span>*</span></label>
+            <textarea id="address" name="address" rows="3"
+                      placeholder="House/Flat No., Street, Area, Karachi" required></textarea>
+            <div class="error-msg" id="addressError"></div>
+          </div>
+
+          <hr class="form-divider">
+
+          <!-- Order Details -->
+          <div class="form-section-title">Order Details</div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fruitSelection">Select Fruit <span>*</span></label>
+              <select id="fruitSelection" name="fruitSelection" required>
+                <option value="">-- Choose a fruit --</option>
+                <option value="sindhri-mango">🥭 Sindhri Mango — Rs. 280/kg</option>
+                <option value="banana">🍌 Bananas — Rs. 120/kg</option>
+                <option value="red-apple">🍎 Red Apples — Rs. 350/kg</option>
+                <option value="kinno-orange">🍊 Kinno Oranges — Rs. 180/kg</option>
+                <option value="grapes">🍇 Black Grapes — Rs. 420/kg</option>
+                <option value="strawberry">🍓 Strawberries — Rs. 500/kg</option>
+                <option value="watermelon">🍉 Watermelon — Rs. 60/kg</option>
+                <option value="pineapple">🍍 Pineapple — Rs. 220/piece</option>
+                <option value="guava">🍐 Guava (Amrood) — Rs. 140/kg</option>
+                <option value="lemon">🍋 Lemons — Rs. 160/kg</option>
+                <option value="kiwi">🥝 Kiwi — Rs. 600/kg</option>
+                <option value="mixed-box">🎁 Mixed Fruit Box — Rs. 1,200</option>
+              </select>
+              <div class="error-msg" id="fruitSelectionError"></div>
+            </div>
+            <div class="form-group">
+              <label for="quantity">Quantity (kg) <span>*</span></label>
+              <input type="number" id="quantity" name="quantity"
+                     placeholder="e.g. 2" min="1" max="50" required>
+              <div class="error-msg" id="quantityError"></div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="deliveryDate">Preferred Delivery Date <span>*</span></label>
+              <input type="date" id="deliveryDate" name="deliveryDate" required>
+              <div class="error-msg" id="deliveryDateError"></div>
+            </div>
+            <div class="form-group">
+              <label for="deliveryTime">Preferred Time Slot</label>
+              <select id="deliveryTime" name="deliveryTime">
+                <option value="">-- Any time --</option>
+                <option value="morning">Morning (9 AM – 12 PM)</option>
+                <option value="afternoon">Afternoon (12 PM – 4 PM)</option>
+                <option value="evening">Evening (4 PM – 8 PM)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="specialInstructions">Special Instructions</label>
+            <textarea id="specialInstructions" name="specialInstructions" rows="2"
+                      placeholder="e.g. Ripe mangoes preferred, leave at gate..."></textarea>
+          </div>
+
+          <hr class="form-divider">
+
+          <!-- Payment -->
+          <div class="form-section-title">Payment Method</div>
+          <div class="form-group">
+            <label for="paymentMethod">Payment Method <span>*</span></label>
+            <select id="paymentMethod" name="paymentMethod" required>
+              <option value="">-- Select payment --</option>
+              <option value="cod">Cash on Delivery (COD)</option>
+              <option value="jazzcash">JazzCash</option>
+              <option value="easypaisa">Easypaisa</option>
+              <option value="bank">Bank Transfer</option>
+            </select>
+            <div class="error-msg" id="paymentMethodError"></div>
+          </div>
+
+          <button type="submit" class="submit-btn">
+            🛒 Place Order Now
+          </button>
+
+          <p style="font-size:.78rem;color:var(--muted);text-align:center;margin-top:.8rem">
+            🔒 Your information is secure. We never share your data.
+          </p>
+
+        </form>
+      </div>
+
+      <!-- ORDER SUMMARY SIDEBAR -->
+      <aside class="order-summary">
+        <h3>🛒 Cart Summary</h3>
+        <div class="summary-items" id="summaryItems">
+          <div class="summary-empty">Add items from the <a href="products.html" style="color:var(--green)">Products page</a> to see them here.</div>
+        </div>
+        <div class="summary-total">
+          <span>Total</span>
+          <strong id="summaryTotal">Rs. 0</strong>
+        </div>
+        <p class="summary-note">🚚 Free delivery on all orders in Karachi.</p>
+        <p class="summary-note">⏰ Order before 2 PM for same-day delivery.</p>
+
+        <hr class="form-divider" style="margin:1rem 0">
+
+        <h4 style="font-size:.82rem;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:.8rem">
+          Why Maru Fruits?
+        </h4>
+        <ul style="display:flex;flex-direction:column;gap:.55rem;font-size:.84rem;color:var(--muted)">
+          <li>✅ 100% Fresh — Guaranteed</li>
+          <li>✅ Same-day delivery in Karachi</li>
+          <li>✅ Cash on delivery available</li>
+          <li>✅ Free replacement if not satisfied</li>
+          <li>✅ 10,000+ happy customers</li>
+        </ul>
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- TRUST STRIP -->
+  <div class="trust-strip">
+    <div class="trust-item"><span>🔒</span> Secure &amp; Private</div>
+    <div class="trust-item"><span>🚚</span> Same-Day Delivery</div>
+    <div class="trust-item"><span>💰</span> Cash on Delivery</div>
+    <div class="trust-item"><span>↩️</span> Free Replacement</div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">🍋 Maru <span>Fruits</span></a>
+        <p>Karachi's most trusted fresh fruit delivery service. Farm-picked, fast-delivered, always fresh.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="seasonal.html">Seasonal Fruits</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="order.html">Order Now</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="#">Delivery Info</a></li>
+          <li><a href="#">Returns Policy</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">FAQs</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+923001234567">📞 0300-1234567</a></li>
+          <li><a href="mailto:info@marufruits.com">✉️ info@marufruits.com</a></li>
+          <li><a href="#">📍 Clifton, Karachi</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Maru Fruits. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- CART DRAWER -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>🛒 Your Cart</h3>
+      <button class="cart-close" id="cartClose">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <span>Total:</span>
+        <strong id="cartTotal">Rs. 0</strong>
+      </div>
+      <div class="cart-actions">
+        <button class="btn btn-outline btn-sm" id="clearCartBtn">Clear</button>
+        <button class="btn btn-gold" onclick="closeCart()">Close ✕</button>
+      </div>
+    </div>
+  </aside>
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="script.js">
+  </script>
+  <script>
+    // Set minimum date to today
+    document.addEventListener('DOMContentLoaded', () => {
+      const dateInput = document.getElementById('deliveryDate');
+      if (dateInput) {
+        const today = new Date().toISOString().split('T')[0];
+        dateInput.min = today;
+        dateInput.value = today;
+      }
+    });
+  </script>
+</body>
+</html>

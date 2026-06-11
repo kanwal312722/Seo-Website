@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fresh Fruits Products | Maru Fruits Karachi</title>
+  <meta name="description" content="Browse our full range of fresh fruits in Karachi. Mangoes, apples, grapes, strawberries and more. Buy online with same-day delivery.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">🍋 Maru <span>Fruits</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="seasonal.html">Seasonal</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="order.html">Order Now</a></li>
+      </ul>
+      <button class="nav-cart-btn" id="cartBtn">
+        🛒 Cart <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="nav-mobile" id="navMobile">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="seasonal.html">Seasonal</a>
+      <a href="about.html">About Us</a>
+      <a href="order.html">Order Now</a>
+      <button class="btn btn-gold btn-sm" id="cartBtnMobile" style="margin-top:.4rem;width:fit-content">🛒 Cart</button>
+    </nav>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <header class="page-hero">
+    <h1>Our Fresh Fruits</h1>
+    <p>Hand-picked from local farms across Pakistan — delivered fresh to your door in Karachi.</p>
+  </header>
+
+  <!-- PRODUCTS SECTION -->
+  <main class="section" style="background:#fff">
+    <div class="section-label">Full Catalogue</div>
+    <h2>All Products</h2>
+    <p class="section-intro">Filter by category and add your favourite fruits directly to cart.</p>
+
+    <!-- Filter buttons -->
+    <div class="products-filter">
+      <button class="filter-btn active" data-filter="all">All Fruits</button>
+      <button class="filter-btn" data-filter="tropical">Tropical</button>
+      <button class="filter-btn" data-filter="citrus">Citrus</button>
+      <button class="filter-btn" data-filter="berries">Berries</button>
+      <button class="filter-btn" data-filter="everyday">Everyday</button>
+      <button class="filter-btn" data-filter="imported">Imported</button>
+    </div>
+
+    <div class="fruits-grid">
+
+      <!-- Tropical -->
+      <article class="fruit-card" data-category="tropical">
+        <span class="badge-tag">Best Seller</span>
+        <img class="fruit-card-img"
+             src="https://images.unsplash.com/photo-1553279768-865429fa0078?w=400&q=80"
+             alt="Fresh Pakistani Sindhri mangoes yellow">
+        <div class="fruit-card-body">
+          <h3>Sindhri Mango</h3>
+          <p>The king of mangoes — golden, fiberless, and irresistibly sweet. Harvested from Sindh farms.</p>
+          <div class="fruit-card-footer">
+            <div class="fruit-card-price">Rs. 280 <span>/ kg</span></div>
+            <button class="btn btn-green btn-sm"
+              onclick="addToCart('mango','Sindhri Mango',280,'🥭','https://images.unsplash.com/photo-1553279768-865429fa0078?w=100&q=60')">
+              + Cart
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <article class="fruit-card" data-category="tropical">
+        <img class="fruit-card-img"
+             src="https://images.unsplash.com/photo-1550258987-190a2d41a8ba?w=400&q=80"
+             alt="Fresh pineapple tropical fruit">
+        <div class="fruit-card-body">
+          <h3>Pineapple</h3>
+          <p>Tangy-sweet tropical pineapples, great for juicing, salads, or eating fresh.</p>
+          <div class="fruit-card-footer">
+            <div class="fruit-card-price">Rs. 220 <span>/ piece</span></div>
+            <button class="btn btn-green btn-sm"
+              onclick="addToCart('pineapple','Pineapple',220,'🍍','https://images.unsplash.com/photo-1550258987-190a2d41a8ba?w=100&q=60')">
+              + Cart
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <article class="fruit-card" data-category="tropical">
+        <img class="fruit-card-img"
+             src="https://images.unsplash.com/photo-1528825871115-3581a5387919?w=400&q=80"
+             alt="Fresh watermelon sliced red">
+        <div class="fruit-card-body">
+          <h3>Watermelon</h3>
+          <p>Big, juicy watermelons — the ultimate summer refresher for the whole family.</p>
+          <div class="fruit-card-footer">
+            <div class="fruit-card-price">Rs. 60 <span>/ kg</span></div>
+            <button class="btn btn-green btn-sm"
+              onclick="addToCart('watermelon','Watermelon',60,'🍉','https://images.unsplash.com/photo-1528825871115-3581a5387919?w=100&q=60')">
+              + Cart
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Citrus -->
+      <article class="fruit-card" data-category="citrus">
+        <img class="fruit-card-img"
+             src="https://images.unsplash.com/photo-1547514701-42782101795e?w=400&q=80"
+             alt="Fresh Kinno oranges from Punjab Pakistan">
+        <div class="fruit-card-body">
+          <h3>Kinno Oranges</h3>
+          <p>Vitamin-C-packed Kinno oranges from Punjab. Perfect for fresh juice every morning.</p>
+          <div class="fruit-card-footer">
+            <div class="fruit-card-price">Rs. 180 <span>/ kg</span></div>
+            <button class="btn btn-green btn-sm"
+              onclick="addToCart('orange','Kinno Oranges',180,'🍊','https://images.unsplash.com/photo-1547514701-42782101795e?w=100&q=60')">
+              + Cart
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <article class="fruit-card" data-category="citrus">
+        <img class="fruit-card-img"
+             src="https://images.unsplash.com/photo-1587411768638-ec71f8e33b78?w=400&q=80"
+             alt="Fresh yellow lemons Pakistan">
+        <div class="fruit-card-body">
+          <h3>Lemons</h3>
+          <p>Bright, zesty lemons ideal for cooking, drinks, and boosting immunity daily.</p>
+          <div class="fruit-card-footer">
+            <div class="fruit-card-price">Rs. 160 <span>/ kg</span></div>
+            <button class="btn btn-green btn-sm"
+              onclick="addToCart('lemon','Lemons',160,'🍋','https://images.unsplash.com/photo-1587411768638-ec71f8e33b78?w=100&q=60')">
+              + Cart
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Berries -->
+      <article class="fruit-card" data-category="berries">
+        <span class="badge-tag">Premium</span>
+        <img class="fruit-card-img"
+             src="https://images.unsplash.com/photo-1464965911861-746a04b4bca6?w=400&q=80"
+             alt="Fresh red strawberries Karachi">
+        <div class="fruit-card-body">
+          <h3>Strawberries</h3>
+          <p>Bright, plump strawberries — ideal for desserts, smoothie bowls, or snacking fresh.</p>
+          <div class="fruit-card-footer">
+            <div class="fruit-card-price">Rs. 500 <span>/ kg</span></div>
+            <button class="btn btn-green btn-sm"
+              onclick="addToCart('strawberry','Strawberries',500,'🍓','https://images.unsplash.com/photo-1464965911861-746a04b4bca6?w=100&q=60')">
+              + Cart
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <article class="fruit-card" data-category="berries">
+        <img class="fruit-card-img"
+             src="https://images.unsplash.com/photo-1537640538966-79f369143f8f?w=400&q=80"
+             alt="Fresh black seedless grapes Pakistan">
+        <div class="fruit-card-body">
+          <h3>Black Grapes</h3>
+          <p>Seedless, sweet black grapes — farm fresh and full of antioxidants.</p>
+          <div class="fruit-card-footer">
+            <div class="fruit-card-price">Rs. 420 <span>/ kg</span></div>
+            <button class="btn btn-green btn-sm"
+              onclick="addToCart('grapes','Black Grapes',420,'🍇','https://images.unsplash.com/photo-1537640538966-79f369143f8f?w=100&q=60')">
+              + Cart
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Everyday -->
+      <article class="fruit-card" data-category="everyday">
+        <img class="fruit-card-img"
+             src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=400&q=80"
+             alt="Ripe yellow bananas bunch Pakistan">
+        <div class="fruit-card-body">
+          <h3>Bananas</h3>
+          <p>Sweet, creamy bananas — Pakistan's most popular fruit and a daily health staple.</p>
+          <div class="fruit-card-footer">
+            <div class="fruit-card-price">Rs. 120 <span>/ kg</span></div>
+            <button class="btn btn-green btn-sm"
+              onclick="addToCart('banana','Bananas',120,'🍌','https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=100&q=60')">
+              + Cart
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <article class="fruit-card" data-category="everyday">
+        <img class="fruit-card-img"
+             src="https://images.unsplash.com/photo-1563746924237-f81d5d4e9d3b?w=400&q=80"
+             alt="Fresh guavas Pakistan desi amrood">
+        <div class="fruit-card-body">
+          <h3>Guava (Amrood)</h3>
+          <p>Crisp, fragrant desi guavas — a beloved Pakistani fruit rich in vitamins.</p>
+          <div class="fruit-card-footer">
+            <div class="fruit-card-price">Rs. 140 <span>/ kg</span></div>
+            <button class="btn btn-green btn-sm"
+              onclick="addToCart('guava','Guava',140,'🍐','https://images.unsplash.com/photo-1563746924237-f81d5d4e9d3b?w=100&q=60')">
+              + Cart
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Imported -->
+      <article class="fruit-card" data-category="imported">
+        <span class="badge-tag">Imported</span>
+        <img class="fruit-card-img"
+             src="https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=400&q=80"
+             alt="Fresh red apples imported Balochistan">
+        <div class="fruit-card-body">
+          <h3>Red Apples</h3>
+          <p>Crisp, juicy apples from the high-altitude orchards of Balochistan.</p>
+          <div class="fruit-card-footer">
+            <div class="fruit-card-price">Rs. 350 <span>/ kg</span></div>
+            <button class="btn btn-green btn-sm"
+              onclick="addToCart('apple','Red Apples',350,'🍎','https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=100&q=60')">
+              + Cart
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <article class="fruit-card" data-category="imported">
+        <img class="fruit-card-img"
+             src="https://images.unsplash.com/photo-1518977676601-b53f82aba655?w=400&q=80"
+             alt="Fresh kiwi fruit sliced green">
+        <div class="fruit-card-body">
+          <h3>Kiwi</h3>
+          <p>Tangy-sweet imported kiwis loaded with vitamin C and digestive enzymes.</p>
+          <div class="fruit-card-footer">
+            <div class="fruit-card-price">Rs. 600 <span>/ kg</span></div>
+            <button class="btn btn-green btn-sm"
+              onclick="addToCart('kiwi','Kiwi',600,'🥝','https://images.unsplash.com/photo-1518977676601-b53f82aba655?w=100&q=60')">
+              + Cart
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <article class="fruit-card" data-category="imported">
+        <img class="fruit-card-img"
+             src="https://images.unsplash.com/photo-1519099790166-1a8a2dec8a1f?w=400&q=80"
+             alt="Fresh blueberries imported berries">
+        <div class="fruit-card-body">
+          <h3>Blueberries</h3>
+          <p>Plump, sweet imported blueberries — superfoods great for brain health.</p>
+          <div class="fruit-card-footer">
+            <div class="fruit-card-price">Rs. 950 <span>/ 250g</span></div>
+            <button class="btn btn-green btn-sm"
+              onclick="addToCart('blueberry','Blueberries',950,'🫐','https://images.unsplash.com/photo-1519099790166-1a8a2dec8a1f?w=100&q=60')">
+              + Cart
+            </button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner">
+    <h2>Ready to Order?</h2>
+    <p>Place a custom order with your selected fruits, quantity, and delivery address.</p>
+    <div class="cta-btns">
+      <a href="order.html" class="btn btn-gold">Place an Order 🛒</a>
+      <a href="seasonal.html" class="btn btn-outline-white">Seasonal Picks →</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">🍋 Maru <span>Fruits</span></a>
+        <p>Karachi's most trusted fresh fruit delivery service. Farm-picked, fast-delivered, always fresh.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="seasonal.html">Seasonal Fruits</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="order.html">Order Now</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="products.html">Tropical Fruits</a></li>
+          <li><a href="products.html">Citrus Fruits</a></li>
+          <li><a href="products.html">Berries</a></li>
+          <li><a href="products.html">Everyday Fruits</a></li>
+          <li><a href="products.html">Imported Fruits</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+923001234567">📞 0300-1234567</a></li>
+          <li><a href="mailto:info@marufruits.com">✉️ info@marufruits.com</a></li>
+          <li><a href="#">📍 Clifton, Karachi</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Maru Fruits. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- CART DRAWER -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>🛒 Your Cart</h3>
+      <button class="cart-close" id="cartClose">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <span>Total:</span>
+        <strong id="cartTotal">Rs. 0</strong>
+      </div>
+      <div class="cart-actions">
+        <button class="btn btn-outline btn-sm" id="clearCartBtn">Clear</button>
+        <a href="order.html" class="btn btn-gold" onclick="closeCart()">Checkout →</a>
+      </div>
+    </div>
+  </aside>
+  <div class="toast-container" id="toastContainer"></div>
+  <script src="script.js"></script>
+</body>
+</html>
